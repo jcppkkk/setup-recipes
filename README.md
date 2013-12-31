@@ -46,7 +46,8 @@ fi
 * `sudo apt-get install nodejs`
 
 ## Install Passenger and nginx
-* `gem install passenger`
+* `gem install passenger --no-ri --no-rdoc`
+* `rbenv rehash`
 * `rbenv sudo passenger-install-nginx-module`
 * `wget -O init-deb.sh http://library.linode.com/assets/660-init-deb.sh`
 * `sudo mv init-deb.sh /etc/init.d/nginx`
