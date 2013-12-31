@@ -43,7 +43,7 @@ fi
 ## Install Node.js
 * `sudo add-apt-repository ppa:chris-lea/node.js`
 * `sudo apt-get update`
-* `sudo apt-get install nodejs`
+* `sudo apt-get -y install nodejs`
 
 ## Install Passenger and nginx
 * `gem install passenger --no-ri --no-rdoc`
@@ -58,7 +58,7 @@ fi
 ## Install PostgreSQL
 * `sudo add-apt-repository ppa:pitti/postgresql`
 * `sudo apt-get update`
-* `sudo apt-get install postgresql libpq-dev`
+* `sudo apt-get -y install postgresql libpq-dev`
 * `sudo passwd postgres` and enter password 2 times
 * `su -l postgres`
 * `psql`
