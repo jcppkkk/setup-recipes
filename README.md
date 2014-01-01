@@ -83,4 +83,18 @@ postgres=# CREATE ROLE postgres LOGIN CREATEDB
 postgres-# \q
 ```
 
+* Edit `/etc/postgresql/9.1/main/pg_hba.conf` and find this line:
+
+```
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+```
+
+* Change it to this:
+
+```
+# Database administrative login by Unix domain socket
+local   all             postgres                                md5
+```
+
 * `/etc/init.d/postgresql restart`
