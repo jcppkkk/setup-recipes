@@ -15,7 +15,14 @@
 
 ## Install rbenv
 * `curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash`
-* Append this at the end of `~/.bashrc`:
+* Locate this line:
+
+```
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+```
+
+* Edit `~/.bashrc` and prepend this:
 
 ```
 export RBENV_ROOT="${HOME}/.rbenv"
@@ -24,6 +31,9 @@ if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 ```
 
 * `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
